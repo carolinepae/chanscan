@@ -19,7 +19,7 @@ fetch('https://a.4cdn.org/boards.json')
                if (err) { console.error(err); return ; }
                threads.forEach(thread => {
                     
-                    console.log('Thread posted ', thread.no, ':', thread.com)
+                    console.log('Thread posted /',b.board,'/', thread.no, ':', thread.com)
 
                     let unsubscribe = astoria.board('ck')
                         .thread(thread.no)
