@@ -25,11 +25,14 @@ fetch('https://a.4cdn.org/boards.json')
                         .thread(thread.no)
                         .listen((context, posts, err) => {
                             if (err) {
-                                return console.log(err)
                                 unsubscribe()
+                                return
+                                
                             }
 
-                                posts.forEach(post => console.log('Post:',thread.no, '#', post.no, ': ', post.com))
+                                posts.forEach(post => {
+                                    console.log(post)
+                                })
                                 // Stop listening
                             
                         })
