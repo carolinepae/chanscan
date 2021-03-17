@@ -31,7 +31,7 @@ fetch('https://a.4cdn.org/boards.json')
                             }
 
                                 posts.forEach(post => {
-                                    console.log(post)
+                                    console.log(thread.no, '#', post.no,': ', thread.com.replace(/<\w+>/g,'').replace(/<\/\w+>/g,'').trim())
                                 })
                                 // Stop listening
                             
